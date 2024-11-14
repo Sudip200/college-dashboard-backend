@@ -1,6 +1,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const { Result ,PlaceMent} = require('./schema');
+const jsonwebtoken = require('jsonwebtoken');
+const dotenv = require('dotenv');
 const cors = require('cors');
 const app = express();
 app.use(cors());
@@ -10,7 +12,9 @@ const path = require('path');
 // Path to your CSV file
 const filePath = path.join(__dirname, 'data/2023.csv');
 
-// Function to read CSV and upload data to MongoDB
+dotenv.config();
+
+
 
 
 // Connect to MongoDB
@@ -50,7 +54,19 @@ app.get('/2023-placement', async (req, res) => {
     const results = await PlaceMent.find();
     res.send(results);
 });
+//login
+app.post('/login', async (req,res)=>{
+    const {email,password}= req.body;
+    if(email=='' || password==''){
+        res.send('Please enter all fields');
+    }else{
+        const user = {email:email};
+        const accessToken = jsonwebtoken.sign(user,process.env.JSON_KEY);
+        res.cookie('token',accessToken,{httpOnly:true});
+}
+})
 
-const port = process.env.PORT || 3000;
+
+const port = process.env.PORT || 3001;
 
 app.listen(port, () => console.log(`Listening on port ${port}...`));
