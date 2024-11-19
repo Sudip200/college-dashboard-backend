@@ -4,10 +4,13 @@ const { Result ,PlaceMent} = require('./schema');
 const jsonwebtoken = require('jsonwebtoken');
 const dotenv = require('dotenv');
 const cors = require('cors');
+const bodyParser = require('body-parser');
 const app = express();
 app.use(cors());
 const csvtojson = require('csvtojson');
 const path = require('path');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // Path to your CSV file
 const filePath = path.join(__dirname, 'data/2023.csv');
@@ -57,12 +60,20 @@ app.get('/2023-placement', async (req, res) => {
 //login
 app.post('/login', async (req,res)=>{
     const {email,password}= req.body;
+    console.log(req.body);
     if(email=='' || password==''){
         res.send('Please enter all fields');
     }else{
+       
+        if(email=='dassudipto200@gmail.com' && password =='1234'){
+              
         const user = {email:email};
         const accessToken = jsonwebtoken.sign(user,process.env.JSON_KEY);
         res.cookie('token',accessToken,{httpOnly:true});
+        res.redirect('http://localhost:3000');
+        }else{
+            res.send('Email or password is incorrect');
+        }   
 }
 })
 
