@@ -1,0 +1,44 @@
+Name,Code,Credit,Year,Semester,Program,Stream
+Analog and Digital Electronics,ESC301,3,2,3,BTECH,CSE
+Data Structure & Algorithms,PCC-CS301,3,2,3,BTECH,CSE
+Computer Organisation,PCC-CS302,3,2,3,BTECH,CSE
+Mathematics-III (Differential Calculus),BSC301,2,2,3,BTECH,CSE
+Economics for Engineers (Humanities-II),HSMC301,3,2,3,BTECH,CSE
+IT Workshop (Sci Lab/MATLAB/Python/R),PCC-CS393,2,2,3,BTECH,CSE
+Analog and Digital Electronics Lab,ESC391,2,2,3,BTECH,CSE
+Data Structure & Algorithms Lab,PCC-CS391,2,2,3,BTECH,CSE
+Computer Organisation Lab,PCC-CS392,2,2,3,BTECH,CSE
+Discrete Mathematics,PCC-CS401,4,2,4,BTECH,CSE
+Computer Architecture,PCC-CS402,3,2,4,BTECH,CSE
+Formal Language & Automata Theory,PCC-CS403,3,2,4,BTECH,CSE
+Design & Analysis of Algorithms,PCC-CS404,3,2,4,BTECH,CSE
+Biology,BSC401,3,2,4,BTECH,CSE
+Environmental Sciences,MC401,1,2,4,BTECH,CSE
+Computer Architecture Lab,PCC-CS492,2,2,4,BTECH,CSE
+Design & Analysis of Algorithms Lab,PCC-CS494,2,2,4,BTECH,CSE
+Software Engineering,ESC501,3,3,5,BTECH,CSE
+Compiler Design,PCC-CS501,3,3,5,BTECH,CSE
+Operating Systems,PCC-CS502,3,3,5,BTECH,CSE
+Object Oriented Programming,PCC-CS503,3,3,5,BTECH,CSE
+Introduction to Industrial Management (Humanities III),HSMC501,3,3,5,BTECH,CSE
+Elective-I,PEC-IT501,3,3,5,BTECH,CSE
+Software Engineering Lab,ESC591,2,3,5,BTECH,CSE
+Operating Systems Lab,PCC-CS592,2,3,5,BTECH,CSE
+Object Oriented Programming Lab,PCC-CS593,2,3,5,BTECH,CSE
+Database Management Systems,PCC-CS601,3,3,6,BTECH,CSE
+Computer Networks,PCC-CS602,3,3,6,BTECH,CSE
+Elective-II,PEC-IT601,3,3,6,BTECH,CSE
+Elective-III,PEC-IT602,3,3,6,BTECH,CSE
+Open Elective-I,OEC-IT601,3,3,6,BTECH,CSE
+Research Methodology,PROJ-CS601,3,3,6,BTECH,CSE
+Database Management Systems Lab,PCC-CS691,2,3,6,BTECH,CSE
+Computer Networks Lab,PCC-CS692,2,3,6,BTECH,CSE
+Elective-IV,PEC-CS701,3,4,7,BTECH,CSE
+Elective-V,PEC-CS702,3,4,7,BTECH,CSE
+Open Elective-II,OEC-CS701,3,4,7,BTECH,CSE
+Project Management and Entrepreneurship,HSMC701,3,4,7,BTECH,CSE
+Project-II,PROJ-CS781,6,4,7,BTECH,CSE
+Elective-VI,PEC-CS801,3,4,8,BTECH,CSE
+Open Elective-III,OEC-CS801,3,4,8,BTECH,CSE
+Open Elective-IV,OEC-CS802,3,4,8,BTECH,CSE
+Project-III,PROJ-CS881,6,4,8,BTECH,CSE

@@ -30,11 +30,31 @@ const PlaceMentSchema = new mongoose.Schema({
     Salary: String,
     Post: String
 });
+const courseSchema = new mongoose.Schema({
+    Name: String,
+    Code: String,
+    Credit: Number,
+    Year: Number,
+    Semester: Number,
+    Program:String,
+    Stream:String,
+})
+const AttendenceSchema = new mongoose.Schema({
+    ROLL: Number,
+    CourseCode: String,
+    TotalClasses: Number,
+    ClassesAttended: Number,
+    Date: { type: Date, default: Date.now }
+
+})
 
 const Result = mongoose.model('Result', resulSchema);
 const PlaceMent = mongoose.model('PlaceMent', PlaceMentSchema);
+const Course = mongoose.model('Course', courseSchema);
+const Attendence = mongoose.model('Attendence', AttendenceSchema);
 module.exports = {
     Result,
-    PlaceMent
-
+    PlaceMent,
+    Course,
+    Attendence
 }
