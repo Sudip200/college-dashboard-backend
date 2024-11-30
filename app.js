@@ -83,7 +83,7 @@ app.post('/attend', async (req, res) => {
     let TotalClasses = 0;
     let ClassesAttended = 0;
 
-    if(ROLL=='' || CourseCode=='' || TotalClasses=='' || ClassesAttended==''){
+    if(ROLL=='' || CourseCode=='' || status==''){
         res.send('Please enter all fields');
     }else{
        //check if the student is already present
@@ -101,6 +101,7 @@ app.post('/attend', async (req, res) => {
                     //just update the total classes
                     TotalClasses = student.TotalClasses + 1;
                     const result = await Attendence.updateOne({ROLL:ROLL,CourseCode:CourseCode},{TotalClasses:TotalClasses});
+                    res.send('Attendence updated successfully');
                 }
             }else{
                 //first time attendence
@@ -131,11 +132,13 @@ app.post('/attend', async (req, res) => {
 
 
     }
-
-
 }
 });
-//login
+app.get('/attendence', async (req, res) => {
+        const {ROLL,CourseCode}= req.body;
+        const results = await Attendence.find({ROLL:ROLL,CourseCode:CourseCode});
+        res.send(results);
+    });
 app.post('/login', async (req,res)=>{
     const {email,password}= req.body;
     console.log(req.body);
