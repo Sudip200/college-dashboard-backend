@@ -25,7 +25,7 @@ mongoose.connect('mongodb+srv://college:1234@cluster0.hz78q.mongodb.net/?retryWr
 
 app.use(express.json());
 app.use(express.static('public'));
-app.use(cors( {origin: 'http://localhost:3000', credentials: true}));
+app.use(cors( {origin: process.env.CLIENT_ROUTE, credentials: true}));
 app.get('/', (req, res) => {
     res.send('Hello World');
 });
@@ -150,7 +150,7 @@ app.post('/login', async (req,res)=>{
               
         const user = {email:email};
         const accessToken = jsonwebtoken.sign(user,process.env.JSON_KEY);
-        res.cookie('token',accessToken,{httpOnly:true}, {secure: true}, {sameSite: 'none'}, {maxAge: 1000*60*60*24});
+        res.cookie('token',accessToken,{httpOnly:true}, {sameSite: 'none'}, {maxAge: 1000*60*60*24});
        res.redirect(process.env.CLIENT_ROUTE)
         }else{
             res.send('Email or password is incorrect');
