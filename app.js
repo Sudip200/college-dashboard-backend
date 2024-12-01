@@ -63,7 +63,7 @@ app.get('/upload-csv-data', async (req, res) => {
     await uploadCsvDataToMongoDB();
     res.send('Data uploaded successfully');
 });
-app.get('/results' ,verifyToken,async (req, res) => {
+app.get('/results' ,async (req, res) => {
   
     const results = await Result.find();
     res.send(results);
