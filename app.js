@@ -146,12 +146,12 @@ app.post('/login', async (req,res)=>{
         res.send('Please enter all fields');
     }else{
        
-        if(email=='dassudipto200@gmail.com' && password =='1234'){
+        if(email=='biswa@1' && password =='123'){
               
         const user = {email:email};
         const accessToken = jsonwebtoken.sign(user,process.env.JSON_KEY);
         res.cookie('token',accessToken,{httpOnly:true});
-        res.redirect('http://localhost:3000');
+        res.redirect(process.env.CLIENT_ROUTE);
         }else{
             res.send('Email or password is incorrect');
         }   
