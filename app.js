@@ -151,7 +151,7 @@ app.post('/login', async (req,res)=>{
         const user = {email:email};
         const accessToken = jsonwebtoken.sign(user,process.env.JSON_KEY);
         res.cookie('token',accessToken,{httpOnly:true}, {sameSite: 'none'}, {maxAge: 1000*60*60*24});
-       res.redirect(process.env.CLIENT_ROUTE)
+       res.json({accessToken:accessToken});
         }else{
             res.send('Email or password is incorrect');
         }    
