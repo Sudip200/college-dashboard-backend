@@ -1,6 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const { Result ,PlaceMent,Course, Attendence} = require('./schema');
+const { Result ,PlaceMent,Course, Attendence,CourseAttendence,CourseData} = require('./schema');
 const jsonwebtoken = require('jsonwebtoken');
 const dotenv = require('dotenv');
 const cors = require('cors');
@@ -29,11 +29,10 @@ app.use(cors( {origin: process.env.CLIENT_ROUTE, credentials: true}));
 app.get('/', (req, res) => {
     res.send('Hello World');
 });
+//functions 
 const uploadCsvDataToMongoDB = async () => {
     try {
         const jsonArray = await csvtojson().fromFile(filePath);
-
-        // Insert the array of student data into MongoDB
         console.log(jsonArray);
         await Course.insertMany(jsonArray);
         console.log('CSV data successfully uploaded to MongoDB');
@@ -44,6 +43,7 @@ const uploadCsvDataToMongoDB = async () => {
 const verifyToken = (req,res,next)=>{
 
     const token = req.headers.cookie.split('=')[1];
+   
     if(!token){
         res.send('You are not authenticated');
     }else{
@@ -56,6 +56,7 @@ const verifyToken = (req,res,next)=>{
         }) 
     } 
 }
+
 
 
 // Call the function to upload data
@@ -78,65 +79,25 @@ app.get('/2023-placement', async (req, res) => {
     const results = await PlaceMent.find();
     res.send(results);
 });
-app.post('/attend', async (req, res) => {
-    const {ROLL,CourseCode,status}= req.body;
-    let TotalClasses = 0;
-    let ClassesAttended = 0;
+app.post('/attend',verifyToken, async (req, res) => {
+   const {CourseCode,ROLL,Date,Status} = req.body;
+   try{
+       if(CourseCode =='' || ROLL =='' || Date == ''|| Status == ''){
+        res.send('Please fill out all form');
+       }else{
+        const newAttendence = new CourseAttendence({CourseCode:CourseCode,Date:Date,Status:Status,StudentId:ROLL});
+        newAttendence.save();
+        res.send('saved')
+       }
+   }catch(e){
+    res.send(e)
+   }
 
-    if(ROLL=='' || CourseCode=='' || status==''){
-        res.send('Please enter all fields');
-    }else{
-       //check if the student is already present
-         const student = await Attendence.findOne({ROLL:ROLL,CourseCode:CourseCode});
-            if(student){
-                //only update the attendence if the student is already present
-                if(status=='present'){
-                   TotalClasses = student.TotalClasses + 1;
-                    ClassesAttended = student.ClassesAttended + 1;
-                    //update the attendence
-                    const result = await Attendence.updateOne({ROLL:ROLL,CourseCode:CourseCode},{TotalClasses:TotalClasses,ClassesAttended:ClassesAttended});
-                    res.send('Attendence updated successfully');
-          
-                }else{
-                    //just update the total classes
-                    TotalClasses = student.TotalClasses + 1;
-                    const result = await Attendence.updateOne({ROLL:ROLL,CourseCode:CourseCode},{TotalClasses:TotalClasses});
-                    res.send('Attendence updated successfully');
-                }
-            }else{
-                //first time attendence
-                if(status=='present'){
-                    TotalClasses = 1;
-                    ClassesAttended = 1;
-                    const attendence = new Attendence({
-                        ROLL:ROLL,
-                        CourseCode:CourseCode,
-                        TotalClasses:TotalClasses,
-                        ClassesAttended:ClassesAttended
-                    });
-                    await attendence.save();
-                    res.send('Attendence updated successfully');
-
-                
-            }else{
-                TotalClasses = 1;
-                const attendence = new Attendence({
-                    ROLL:ROLL,
-                    CourseCode:CourseCode,
-                    TotalClasses:TotalClasses,
-                    ClassesAttended:ClassesAttended
-                });
-                await attendence.save();
-                res.send('Attendence updated successfully');
-            }
-
-
-    }
-}
+    
 });
-app.get('/attendence', async (req, res) => {
-        const {ROLL,CourseCode}= req.body;
-        const results = await Attendence.find({ROLL:ROLL,CourseCode:CourseCode});
+app.get('/attendence',verifyToken, async (req, res) => {
+        const {Date,CourseCode}= req.query;
+        const results = await CourseAttendence.find({Date:Date,CourseCode:CourseCode});
         res.send(results);
     });
 app.post('/login', async (req,res)=>{
@@ -151,11 +112,50 @@ app.post('/login', async (req,res)=>{
         const user = {email:email};
         const accessToken = jsonwebtoken.sign(user,process.env.JSON_KEY);
         res.cookie('token', accessToken, { httpOnly: true, sameSite: 'none', maxAge: 1000 * 60 * 60 * 24, domain: process.env.CLIENT_ROUTE, secure: true });
-       res.json({accessToken:accessToken});
+        res.json({accessToken:accessToken});
         }else{
             res.send('Email or password is incorrect');
         }    
 }
+})
+
+app.post('/checkifexist', verifyToken, async (req,res)=>{
+    const {CourseCode,Date} = req.body;
+    const attendence = await Attendence.find({CourseCode:CourseCode,Date:Date});
+    if(attendence.length>0){
+        res.send(attendence);
+    }else{
+        res.send('create');
+    }
+
+})
+app.get('/individualattendence',verifyToken, async (req,res)=>{
+    const {CourseCode,ROLL} = req.query;
+    const attendence = await CourseAttendence.find({CourseCode:CourseCode,StudentId:ROLL});
+    console.log(attendence);
+    const coursedata = await CourseData.find({CourseCode:CourseCode});
+    totalClass = coursedata.length;
+    let present = 0;
+    attendence.map((data)=>{
+        if(data.Status=='present'){
+            present++;
+        }
+    })
+    let percentage = (present/totalClass)*100;
+    res.send({totalClass,present,percentage});
+}
+)
+app.post('/createclass',verifyToken,async (req,res)=>{
+    const {CourseCode,Date}=req.body;
+    const coursedata= await CourseData.findOne({CourseCode:CourseCode,Date:Date});
+    if(coursedata){
+        res.send('created');
+      
+    }else{
+        const newCourseData = new CourseData({CourseCode:CourseCode,Date:Date});
+        newCourseData.save();
+        res.send('created');
+    }
 })
 
 

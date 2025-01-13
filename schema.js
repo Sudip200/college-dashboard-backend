@@ -44,17 +44,31 @@ const AttendenceSchema = new mongoose.Schema({
     CourseCode: String,
     TotalClasses: Number,
     ClassesAttended: Number,
-    Date: { type: Date, default: Date.now }
+    Date:String
 
+})
+const CourseAttendenceSchema = new mongoose.Schema({
+  CourseCode:String,
+  StudentId:String,
+  Status:String,
+  Date:String
+})
+const CourseDataSchema= new mongoose.Schema({
+    CourseCode:String,
+    Date:String
 })
 
 const Result = mongoose.model('Result', resulSchema);
 const PlaceMent = mongoose.model('PlaceMent', PlaceMentSchema);
 const Course = mongoose.model('Course', courseSchema);
 const Attendence = mongoose.model('Attendence', AttendenceSchema);
+const CourseAttendence= mongoose.model('CourseAttendence',CourseAttendenceSchema);
+const CourseData= mongoose.model('CourseData',CourseDataSchema)
 module.exports = {
     Result,
     PlaceMent,
     Course,
-    Attendence
+    Attendence,
+    CourseAttendence,
+    CourseData
 }
