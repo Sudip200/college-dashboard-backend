@@ -57,6 +57,17 @@ const CourseDataSchema= new mongoose.Schema({
     CourseCode:String,
     Date:String
 })
+const FacultySchema = new mongoose.Schema({
+    Name:String,
+    Qualification:String,
+    Specialization:String,
+    Designation:String,
+    Department:String,
+   
+   
+    
+})
+
 
 const Result = mongoose.model('Result', resulSchema);
 const PlaceMent = mongoose.model('PlaceMent', PlaceMentSchema);
@@ -64,11 +75,13 @@ const Course = mongoose.model('Course', courseSchema);
 const Attendence = mongoose.model('Attendence', AttendenceSchema);
 const CourseAttendence= mongoose.model('CourseAttendence',CourseAttendenceSchema);
 const CourseData= mongoose.model('CourseData',CourseDataSchema)
+const Faculty= mongoose.model('Faculty',FacultySchema)
 module.exports = {
     Result,
     PlaceMent,
     Course,
     Attendence,
     CourseAttendence,
-    CourseData
+    CourseData,
+    Faculty
 }
