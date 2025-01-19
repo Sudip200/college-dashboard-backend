@@ -1,100 +1,122 @@
-Name,Qualification,Specialization,Designation
-Dr. Bimal Datta,Ph.D (Engg.),Engineering,Professor
-Dr. Amitava Sen,Ph.D (Engg.),Computer Science,Professor
-Dr. Sandeep Malik,Ph.D (Engg.),Computer Science & Engineering,Professor
-Dr. Himadri Biswas,Ph.D (Engg.),Computer Science & Engineering,Professor
-Dr. Dipankar Misra,Ph.D (Engg.),Computer Science & Engineering,Professor
-Dr. Sahana Das,Ph.D (Engg.),Computer Science,Professor
-Dr. Munshi Yusuf Alam,Ph.D (Engg.),Computer Science & Engineering,Associate Professor
-Dr. Arup Roy,Ph.D (Engg.),Computer Science & Engineering,Associate Professor
-Dr. Debasish Mukherjee,Ph.D (Engg.),Computer Science,Associate Professor
-Dr. Sujit Biswas,Ph.D (Engg.),Computer Science & Engineering,Assistant Professor
-Mr. Jayanta Basak,M.Tech,Computer Science & Engineering,Assistant Professor
-Mr. Ashish Pramanik,M.Tech,Computer Science & Engineering,Assistant Professor
-Mr. Arindom Mitra,M.Tech,Intelligent Automation & Robotics,Assistant Professor
-Mr. Rupam Sardar,M.Tech,VLSI Design,Assistant Professor
-Ms. Trisha Mondal,M.Tech,Information Technology,Assistant Professor
-Ms. Rituparna Dey,M.Tech,Computer Engineering & Application,Assistant Professor
-Ms. Nivedita Das,M.Tech,Information Technology,Assistant Professor
-Ms. Mousumi Ojha,M.Tech,Computer Technology,Assistant Professor
-Mr. Dipayan Das,M.Tech,Information Technology,Assistant Professor
-Mr. Arjun Chatterjee,M.Tech,Computer Science & Engineering,Assistant Professor
-Mr. Uddyalok Chakraborty,M.Tech,Augmented Reality & Virtual Reality,Assistant Professor
-Mr. Sk Anamul Sanowar,M.Tech,Computer Science & Engineering,Assistant Professor
-Mr. Raj Kumar Paul,M.Tech,Computer Science & Engineering,Assistant Professor
-Ms. Atreyee Datta,M.Tech,Computer Science & Engineering,Assistant Professor
-Mr. Sayan Das,M.Tech,Computer Science & Engineering,Assistant Professor
-Mr. Rakesh Kumar Gupta,M.Tech,Intelligent Automation & Robotics,Assistant Professor
-Mr. Jayanta Pratihar,M.Tech,Computer Science & Engineering,Assistant Professor
-Mr. Sagar Chakraborty,M.Tech,Information & Communication Technology,Assistant Professor
-Mr. Kaushik Sarkar,M.Tech,Computer Science & Engineering,Assistant Professor
-Mr. Archisman Ghosh,M.Tech,Computer Science & Engineering,Assistant Professor
-Dr. Amitava Sen,Ph.D (Engg.),Computer Science,Professor
-Dr. Sandeep Malik,Ph.D (Engg.),Computer Science & Engineering,Professor
-Dr. Himadri Biswas,Ph.D (Engg.),Computer Science & Engineering,Professor
-Dr. Dipankar Misra,Ph.D (Engg.),Computer Science & Engineering,Professor
-Dr. Sahana Das,Ph.D (Engg.),Computer Science,Professor
-Dr. Munshi Yusuf Alam,Ph.D (Engg.),Computer Science & Engineering,Associate Professor
-Dr. Arup Roy,Ph.D (Engg.),Computer Science & Engineering,Associate Professor
-Dr. Debasish Mukherjee,Ph.D (Engg.),Computer Science,Associate Professor
-Dr. Sujit Biswas,Ph.D (Engg.),Computer Science & Engineering,Assistant Professor
-Mr. Jayanta Basak,M.Tech,Computer Science & Engineering,Assistant Professor
-Mr. Ashish Pramanik,M.Tech,Computer Science & Engineering,Assistant Professor
-Mr. Arindom Mitra,M.Tech,Intelligent Automation & Robotics,Assistant Professor
-Mr. Rupam Sardar,M.Tech,VLSI Design,Assistant Professor
-Ms. Trisha Mondal,M.Tech,Information Technology,Assistant Professor
-Ms. Rituparna Dey,M.Tech,Computer Engineering & Application,Assistant Professor
-Ms. Nivedita Das,M.Tech,Information Technology,Assistant Professor
-Ms. Mousumi Ojha,M.Tech,Computer Technology,Assistant Professor
-Mr. Dipayan Das,M.Tech,Information Technology,Assistant Professor
-Mr. Arjun Chatterjee,M.Tech,Computer Science & Engineering,Assistant Professor
-Mr. Uddyalok Chakraborty,M.Tech,Augmented Reality & Virtual Reality,Assistant Professor
-Mr. Sk Anamul Sanowar,M.Tech,Computer Science & Engineering,Assistant Professor
-Mr. Raj Kumar Paul,M.Tech,Computer Science & Engineering,Assistant Professor
-Ms. Atreyee Datta,M.Tech,Computer Science & Engineering,Assistant Professor
-Mr. Sayan Das,M.Tech,Computer Science & Engineering,Assistant Professor
-Mr. Jayanta Pratihar,M.Tech,Computer Science & Engineering,Assistant Professor
-Mr. Sagar Chakraborty,M.Tech,Information & Communication Technology,Assistant Professor
-Mr. Kaushik Sarkar,M.Tech,Computer Science & Engineering,Assistant Professor
-Mr. Archisman Ghosh,M.Tech,Computer Science & Engineering,Assistant Professor
-Dr. Sudarshan Goswami,Ph.D (Engg.),Computer Science & Engineering,Associate Professor
-Mr. Rishov Saha,M.Tech,Computer Engineering,Assistant Professor
-Mr. Kashi Nath Dutta,M.E,Information Technology,Assistant Professor
-Dr. Sudarshan Goswami,Ph.D (Engg.),Computer Science & Engineering,Associate Professor
-Mr. Rishov Saha,M.Tech,Computer Engineering,Assistant Professor
-Mr. Kashi Nath Dutta,M.E,Information Technology,Assistant Professor
-Mr. Subhadeep Majumdar,M.Tech,Intelligent Automation & Robotics,Assistant Professor
-Dr. Ranjan Kumar Mondal,Ph.D (Engg.),Computer Science & Engineering,Assistant Professor
-Mr. Vikas Gupta,M.Tech,Computer Science & Engineering,Assistant Professor
-Mr. Subhadeep Majumdar,M.Tech,Intelligent Automation & Robotics,Assistant Professor
-Dr. Ranjan Kumar Mondal,Ph.D (Engg.),Computer Science & Engineering,Assistant Professor
-Mr. Vikas Gupta,M.Tech,Computer Science & Engineering,Assistant Professor
-Arnab Chatterjee,Ph.D,None,Professor & Head-HU
-Debabrata Hazra,Ph.D,None,Assistant Professor
-Anusriya Mukherjee,MBA,None,Associate Professor
-Abhinandan Bag,MA,None,Assistant Professor
-DR ANINDITA NAHA,M.A and Ph.D,None,Assistant Professor
-DR ASHOK KUMAR SHAW,M.Sc. and PhD,None,Professor
-DR. SUKHAMOY PATTANAYAK,M.Sc. and PhD,None,Assistant Professor
-DR DEBRAJ ROY,M.Sc. and PhD,None,Assistant Professor
-DALIA NANDY,MA in Math,None,Assistant Professor
-KOUSHIK NANDI,M.Sc,None,Assistant Professor
-DEBGOPAL SAHOO,M.Sc,None,Assistant Professor
-Dr. Vaskar Sarkar,PhD,None,Professor
-DR. SILADITYA BANDYOPADHYAY,M.Sc. and PhD,None,Professor
-DR. SOURAV SADHUKHAN,M.Sc. and PhD,None,Assistant Professor
-SUMNI MUKHERJEE (BANERJEE),M.Sc,None,Assistant Professor
-DR SUBHAJIT DASH,M.Sc. and PhD,None,Assistant Professor
-MR. PULAKESH PARUI,M.Sc,None,Assistant Professor
-DR LABAKANTA MONDAL,M.Sc. and PhD,None,Professor
-DR. ARNAB ROY,M.Sc. and PhD,None,Professor
-DR. UTTAM KUMAR BASAK,M.Sc. and PhD,None,Assistant Professor
-ANIK BANERJEE,M.Sc,None,Assistant Professor
-SANCHAITA SARKAR,M.Sc,None,Assistant Professor
-ARIJIT MAITI,M.Sc,None,Assistant Professor
-Dr. Sunanda Hazra,ME/M. Tech and PhD,None,Assistant Professor
-Mr. Sudip Kumar Ghorai,M.E/M.Tech,None,Assistant Professor
-DR. SAHANA DAS,MCA and PhD,None,Assistant Professor
-JAYANTA BASAK,M.E/M.Tech,None,Assistant Professor
-SOURAV PAUL,M.E/M.Tech,None,Assistant Professor
-ARNAB PAUL,M.E/M.Tech,None,Assistant Professor
+
+Department,Name,Qualification,Specialization,Designation
+Civil,Prof. (Dr.) Jyoti Kusum Acharya,Ph.D,None,Professor
+Civil,Prof. (Dr.) Tushar Kanti Dey,Ph.D,None,Professor
+Civil,Prof. (Dr.) Sujata Purkayastha,Ph.D,None,Associate Professor
+Civil,Prof. (Dr.) Sanghamitra Medda,Ph.D,None,Associate Professor
+Civil,Prof. Sumit Kanjilal,M.Tech,None,Assistant Professor
+Civil,Prof. Krishnan Pal,M.Tech,None,Assistant Professor
+Civil,Prof. Chandan Kumar,M.Tech,None,Assistant Professor
+Civil,Prof. Chaiti Ray,M.Tech,None,Assistant Professor
+Civil,Prof. Tapabrata Roy,M.Tech,None,Assistant Professor
+Civil,Prof. Chinmoy Pal,M.Tech,None,Assistant Professor
+Civil,Prof. Priya Rai,M.Tech,None,Assistant Professor
+Civil,Prof. Anindya Roy Pradhan,M.Tech,None,Assistant Professor
+Civil,Prof. Sayan Deb,M.Tech,None,Assistant Professor
+Civil,Prof. Pritiparna Ghoshal,M.Tech,None,Assistant Professor
+Mechanical,Prof.(Dr.) Pallab Roy,"M.E., Ph.D.",None,Professor & HOD
+Mechanical,Prof.(Dr.) Swapan Kumar Mazumder,Machine Design,None,Professor
+Mechanical,Prof.(Dr.) Ravi Shankar Sinha,"B.Tech., M.Tech., Ph.D.",None,Associate Professor
+Mechanical,Prof.(Dr.) Sarbendu Roy,"Dip, A.M.I.E., M.E., Ph.D.",None,Associate Professor
+Mechanical,Dr. Milan Krishna Singha Sarkar,"B.E., M.E., Ph.D.",None,Associate Professor
+Mechanical,Mr. Debajit Banerjee,"B.E., M.E.",None,Assistant Professor
+Mechanical,Ms. Samriddhya Ray Chowdhury,"B.Tech., ME",None,Assistant Professor
+Mechanical,Mr. Abhijit Roy,M.Tech.,None,Assistant Professor
+Mechanical,Md. Mumtaz Alam Ansari,"B.E., M.Tech.",None,Assistant Professor
+Mechanical,Shri Deb Dulal Gangulyi,"AIME, ME",None,Assistant Professor
+Mechanical,Shri Jayanta Mistri,M.Tech.,None,Assistant Professor
+Mechanical,Shri Arnab Pauli,B.Tech.,None,Assistant Professor
+Mechanical,Shri Dwaipayan Gupta,"B.Tech., M.Tech.",None,Assistant Professor
+Mechanical,Shri Sourav Paul,B.Tech.,None,Assistant Professor
+EE,Dr. Narendra Nath Jana,ME/M.Tech and PhD,None,Professor
+EE,Dr. Adhir Baran Chattopadhyay,ME/M.Tech and PhD,None,Professor
+EE,Dr. Sudipta Acharya,ME/M.Tech and PhD,None,Associate Professor
+EE,Dr. Sunanda Hazra,ME/M.Tech and PhD,None,Associate Professor
+EE,Dr. V. Siva Rama Bramaih,ME/M.Tech and PhD,None,Associate Professor
+EE,Dr. Subhro Jyoti Sarkar,"B.Tech., M.Tech., Ph.D.",None,Associate Professor
+EE,Sudeshna Nath,M.E/M.Tech,None,Assistant Professor
+EE,Pallobi Deb Roy,M.E/M.Tech,None,Associate Professor
+EE,Priya Adak,M.E/M.Tech,None,Associate Professor
+EE,Dipak Kumar Shaw,M.E/M.Tech,None,Associate Professor
+EE,Sudip Kumar Ghorui,M.E/M.Tech,None,Associate Professor
+EE,Soubhik Bagchi,M.E/M.Tech,None,Associate Professor
+EE,Roshan Ghosh,M.E/M.Tech,None,Associate Professor
+ECE,Dr. Deepak Kumar Nayak,ME/M.Tech and PhD,None,Professor
+ECE,Champak Adhikari,M.E/M.Tech,None,Assistant Professor
+ECE,Dr. Rahul Bosu,ME/M.Tech and PhD,None,Associate Professor
+ECE,Nibedita Mukherjee,M.E/M.Tech,None,Assistant Professor
+ECE,Tania Paul,M.E/M.Tech,None,Assistant Professor
+ECE,Kakali Sengupta (Das),M.E/M.Tech,None,Assistant Professor
+ECE,Dr. Sumanta Bhattacharyya,ME/M.Tech and PhD,None,Associate Professor
+ECE,Sourabh Basak,M.E/M.Tech,None,Assistant Professor
+ECE,Sayeri Dutta,M.E/M.Tech,None,Assistant Professor
+ECE,Debarghya Roya,M.E/M.Tech,None,Assistant Professor
+CSE,Dr. Bimal Datta,Ph.D (Engg.),Engineering,Professor
+CSE,Dr. Amitava Sen,Ph.D (Engg.),Computer Science,Professor
+CSE,Dr. Sandeep Malik,Ph.D (Engg.),Computer Science & Engineering,Professor
+CSE,Dr. Himadri Biswas,Ph.D (Engg.),Computer Science & Engineering,Professor
+CSE,Dr. Dipankar Misra,Ph.D (Engg.),Computer Science & Engineering,Professor
+CSE,Dr. Sahana Das,Ph.D (Engg.),Computer Science,Professor
+CSE,Dr. Munshi Yusuf Alam,Ph.D (Engg.),Computer Science & Engineering,Associate Professor
+CSE,Dr. Arup Roy,Ph.D (Engg.),Computer Science & Engineering,Associate Professor
+CSE,Dr. Debasish Mukherjee,Ph.D (Engg.),Computer Science,Associate Professor
+CSE,Dr. Sujit Biswas,Ph.D (Engg.),Computer Science & Engineering,Assistant Professor
+CSE,Mr. Jayanta Basak,M.Tech,Computer Science & Engineering,Assistant Professor
+CSE,Mr. Ashish Pramanik,M.Tech,Computer Science & Engineering,Assistant Professor
+CSE,Mr. Arindom Mitra,M.Tech,Intelligent Automation & Robotics,Assistant Professor
+CSE,Mr. Rupam Sardar,M.Tech,VLSI Design,Assistant Professor
+CSE,Ms. Trisha Mondal,M.Tech,Information Technology,Assistant Professor
+CSE,Ms. Rituparna Dey,M.Tech,Computer Engineering & Application,Assistant Professor
+CSE,Ms. Nivedita Das,M.Tech,Information Technology,Assistant Professor
+CSE,Ms. Mousumi Ojha,M.Tech,Computer Technology,Assistant Professor
+CSE,Mr. Dipayan Das,M.Tech,Information Technology,Assistant Professor
+CSE,Mr. Arjun Chatterjee,M.Tech,Computer Science & Engineering,Assistant Professor
+CSE,Mr. Uddyalok Chakraborty,M.Tech,Augmented Reality & Virtual Reality,Assistant Professor
+CSE,Mr. Sk Anamul Sanowar,M.Tech,Computer Science & Engineering,Assistant Professor
+CSE,Mr. Raj Kumar Paul,M.Tech,Computer Science & Engineering,Assistant Professor
+CSE,Ms. Atreyee Datta,M.Tech,Computer Science & Engineering,Assistant Professor
+CSE,Mr. Sayan Das,M.Tech,Computer Science & Engineering,Assistant Professor
+CSE,Mr. Rakesh Kumar Gupta,M.Tech,Intelligent Automation & Robotics,Assistant Professor
+CSE,Mr. Jayanta Pratihar,M.Tech,Computer Science & Engineering,Assistant Professor
+CSE,Mr. Sagar Chakraborty,M.Tech,Information & Communication Technology,Assistant Professor
+CSE,Mr. Kaushik Sarkar,M.Tech,Computer Science & Engineering,Assistant Professor
+CSE,Mr. Archisman Ghosh,M.Tech,Computer Science & Engineering,Assistant Professor
+CSE,Dr. Sudarshan Goswami,Ph.D (Engg.),Computer Science & Engineering,Associate Professor
+CSE,Mr. Rishov Saha,M.Tech,Computer Engineering,Assistant Professor
+CSE,Mr. Kashi Nath Dutta,M.E,Information Technology,Assistant Professor
+CSE,Mr. Subhadeep Majumdar,M.Tech,Intelligent Automation & Robotics,Assistant Professor
+CSE,Dr. Ranjan Kumar Mondal,Ph.D (Engg.),Computer Science & Engineering,Assistant Professor
+CSE,Mr. Vikas Gupta,M.Tech,Computer Science & Engineering,Assistant Professor
+HU,Arnab Chatterjee,Ph.D,None,Professor & Head-HU
+HU,Debabrata Hazra,Ph.D,None,Assistant Professor
+HU,Anusriya Mukherjee,MBA,None,Associate Professor
+HU,Abhinandan Bag,MA,None,Assistant Professor
+HU,DR ANINDITA NAHA,M.A and Ph.D,None,Assistant Professor
+Mathematics,DR ASHOK KUMAR SHAW,M.Sc. and PhD,None,Professor
+Mathematics,DR. SUKHAMOY PATTANAYAK,M.Sc. and PhD,None,Assistant Professor
+Mathematics,DR DEBRAJ ROY,M.Sc. and PhD,None,Assistant Professor
+Mathematics,DALIA NANDY,MA in Math,None,Assistant Professor
+Mathematics,KOUSHIK NANDI,M.Sc,None,Assistant Professor
+Mathematics,DEBGOPAL SAHOO,M.Sc,None,Assistant Professor
+Mathematics,Dr. Vaskar Sarkar,PhD,None,Professor
+Chemistry,DR. SILADITYA BANDYOPADHYAY,M.Sc. and PhD,None,Professor
+Chemistry,DR. SOURAV SADHUKHAN,M.Sc. and PhD,None,Assistant Professor
+Chemistry,SUMNI MUKHERJEE (BANERJEE),M.Sc,None,Assistant Professor
+Chemistry,DR SUBHAJIT DASH,M.Sc. and PhD,None,Assistant Professor
+Chemistry,MR. PULAKESH PARUI,M.Sc,None,Assistant Professor
+Physics,DR LABAKANTA MONDAL,M.Sc. and PhD,None,Professor
+Physics,DR. ARNAB ROY,M.Sc. and PhD,None,Professor
+Physics,DR. UTTAM KUMAR BASAK,M.Sc. and PhD,None,Assistant Professor
+Physics,ANIK BANERJEE,M.Sc,None,Assistant Professor
+Physics,SANCHAITA SARKAR,M.Sc,None,Assistant Professor
+Physics,ARIJIT MAITI,M.Sc,None,Assistant Professor
+IT,Dr. Mohd Sadim,Ph.D (Engg.),Computer Science & Engineering,Associate Professor
+IT,Mr. Siddhartha Pradhan,M.Tech,Computer Science & Engineering,Assistant Professor
+IT,Mr. Kaushal Kumar,M.Tech,Computer Science & Engineering,Assistant Professor
+IT,Mr. Indrajit Chakraborty,M.Tech,Computer Science & Engineering,Assistant Professor
+CSE AI,Mr. Subhadeep Majumdar,M.Tech,Intelligent Automation & Robotics,Assistant Professor
+CSE AI,Dr. Ranjan Kumar Mondal,Ph.D (Engg.),Computer Science & Engineering,Assistant Professor
+CSE AI,Mr. Vikas Gupta,M.Tech,Computer Science & Engineering,Assistant Professor
+CSE Cyber Security,Dr. Sudarshan Goswami,Ph.D (Engg.),Computer Science & Engineering,Associate Professor
+CSE Cyber Security,Mr. Rishov Saha,M.Tech,Computer Engineering,Assistant Professor
+CSE Cyber Security,Mr. Kashi Nath Dutta,M.E,Information Technology,Assistant Professor

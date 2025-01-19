@@ -1,11 +1,11 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const { Result ,PlaceMent,Course, Attendence,CourseAttendence,CourseData} = require('./schema');
+const { Result ,PlaceMent,Course, Attendence,CourseAttendence,CourseData, Faculty} = require('./schema');
 const jsonwebtoken = require('jsonwebtoken');
 const dotenv = require('dotenv');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-
+const faculty = require('./data/faculty')
 const app = express();
 
 const csvtojson = require('csvtojson');
@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Path to your CSV file
-const filePath = path.join(__dirname, 'data/courses.csv');
+const filePath = path.join(__dirname, 'data/faculty.csv');
 
 dotenv.config();
 
@@ -25,23 +25,26 @@ mongoose.connect('mongodb+srv://college:1234@cluster0.hz78q.mongodb.net/?retryWr
 
 app.use(express.json());
 app.use(express.static('public'));
-app.use(cors( {origin: process.env.CLIENT_ROUTE, credentials: true}));
+app.use(cors( {origin: process.env.CLIENT_ROUTE, credentials: true})); 
 app.get('/', (req, res) => {
     res.send('Hello World');
 });
 //functions 
 const uploadCsvDataToMongoDB = async () => {
     try {
-        const jsonArray = await csvtojson().fromFile(filePath);
-        console.log(jsonArray);
-        await Course.insertMany(jsonArray);
+       // const jsonArray = await csvtojson().fromFile(filePath);
+        
+        //console.log(jsonArray);
+        await Faculty.insertMany(faculty);
         console.log('CSV data successfully uploaded to MongoDB');
     } catch (err) {
         console.error('Error uploading CSV data:', err);
     }
 };
 const verifyToken = (req,res,next)=>{
-
+     if(!req.headers.cookie){
+        res.send('You are not authenticated');
+    }
     const token = req.headers.cookie.split('=')[1];
    
     if(!token){
@@ -95,6 +98,11 @@ app.post('/attend',verifyToken, async (req, res) => {
 
     
 });
+app.get('/faculty', verifyToken,async (req, res) => {
+    
+    const results = await Faculty.find();
+    res.send(results);
+});
 app.get('/attendence',verifyToken, async (req, res) => {
         const {Date,CourseCode}= req.query;
         const results = await CourseAttendence.find({Date:Date,CourseCode:CourseCode});
@@ -108,7 +116,7 @@ app.post('/login', async (req,res)=>{
     }else{
        
         if(email=='biswa@1' && password =='123'){
-              
+              console.log(1);
         const user = {email:email};
         const accessToken = jsonwebtoken.sign(user,process.env.JSON_KEY);
         res.cookie('token', accessToken, { httpOnly: true, sameSite: 'none', maxAge: 1000 * 60 * 60 * 24, domain: process.env.CLIENT_ROUTE, secure: true });

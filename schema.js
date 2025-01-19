@@ -58,14 +58,12 @@ const CourseDataSchema= new mongoose.Schema({
     Date:String
 })
 const FacultySchema = new mongoose.Schema({
+    Department:String,
     Name:String,
     Qualification:String,
     Specialization:String,
     Designation:String,
-    Department:String,
    
-   
-    
 })
 
 
