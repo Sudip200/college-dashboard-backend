@@ -1,6 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const { Result ,PlaceMent,Course, Attendence,CourseAttendence,CourseData, Faculty} = require('./schema');
+const { Result ,PlaceMent,Course, Attendence,CourseAttendence,CourseData, Faculty,Notification} = require('./schema');
 const jsonwebtoken = require('jsonwebtoken');
 const dotenv = require('dotenv');
 const cors = require('cors');
@@ -84,6 +84,7 @@ app.get('/2023-placement', async (req, res) => {
 });
 app.post('/createnotification',verifyToken, async (req, res) => {
     const {Title,Description,Date} = req.body;
+    console.log(Title)
     try{
         if(Title =='' || Description =='' || Date == ''){
             res.send('Please fill out all form');
@@ -95,7 +96,7 @@ app.post('/createnotification',verifyToken, async (req, res) => {
     }catch(e){
         res.send(e)
 
-    }
+    } 
 });
 app.get('/notifications',verifyToken, async (req, res) => {
     const allnotices = await Notification.find();
@@ -162,7 +163,7 @@ app.post('/checkifexist', verifyToken, async (req,res)=>{
     if(attendence.length>0){
         res.send(attendence);
     }else{
-        res.send('create');
+        res.send('created');
     }
 
 })
