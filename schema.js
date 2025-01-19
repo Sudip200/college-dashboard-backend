@@ -27,8 +27,9 @@ const PlaceMentSchema = new mongoose.Schema({
     Gender: String,
     MOBILE: Number,
     Company: String,
-    Salary: String,
-    Post: String
+    Salary: String, 
+    Post: String,
+    Year: Number,
 });
 const courseSchema = new mongoose.Schema({
     Name: String,
@@ -65,6 +66,11 @@ const FacultySchema = new mongoose.Schema({
     Designation:String,
    
 })
+const NotificationSchema = new mongoose.Schema({
+    Title:String,
+    Description:String,
+    Date:String
+})
 
 
 const Result = mongoose.model('Result', resulSchema);
@@ -74,6 +80,7 @@ const Attendence = mongoose.model('Attendence', AttendenceSchema);
 const CourseAttendence= mongoose.model('CourseAttendence',CourseAttendenceSchema);
 const CourseData= mongoose.model('CourseData',CourseDataSchema)
 const Faculty= mongoose.model('Faculty',FacultySchema)
+const Notification= mongoose.model('Notification',NotificationSchema)
 module.exports = {
     Result,
     PlaceMent,
@@ -81,5 +88,6 @@ module.exports = {
     Attendence,
     CourseAttendence,
     CourseData,
-    Faculty
+    Faculty,
+    Notification
 }

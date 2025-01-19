@@ -14,11 +14,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Path to your CSV file
-const filePath = path.join(__dirname, 'data/faculty.csv');
+const filePath = path.join(__dirname, 'data/2023.csv');
 
 dotenv.config();
 
-// Connect to MongoDB
+// Connect to MongoDB 
 mongoose.connect('mongodb+srv://college:1234@cluster0.hz78q.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log('Connected to MongoDB...'))
     .catch(err => console.error('Could not connect to MongoDB...', err));
@@ -32,10 +32,10 @@ app.get('/', (req, res) => {
 //functions 
 const uploadCsvDataToMongoDB = async () => {
     try {
-       // const jsonArray = await csvtojson().fromFile(filePath);
+        const jsonArray = await csvtojson().fromFile(filePath);
         
-        //console.log(jsonArray);
-        await Faculty.insertMany(faculty);
+        console.log(jsonArray);
+    await PlaceMent.insertMany(jsonArray);
         console.log('CSV data successfully uploaded to MongoDB');
     } catch (err) {
         console.error('Error uploading CSV data:', err);
@@ -82,6 +82,35 @@ app.get('/2023-placement', async (req, res) => {
     const results = await PlaceMent.find();
     res.send(results);
 });
+app.post('/createnotification',verifyToken, async (req, res) => {
+    const {Title,Description,Date} = req.body;
+    try{
+        if(Title =='' || Description =='' || Date == ''){
+            res.send('Please fill out all form');
+        }else{
+            const newNotification = new Notification({Title:Title,Description:Description,Date:Date});
+            newNotification.save();
+            res.send('saved')
+        }
+    }catch(e){
+        res.send(e)
+
+    }
+});
+app.get('/notifications',verifyToken, async (req, res) => {
+    const allnotices = await Notification.find();
+    res.send(allnotices);
+});
+
+   
+
+
+
+
+
+
+
+
 app.post('/attend',verifyToken, async (req, res) => {
    const {CourseCode,ROLL,Date,Status} = req.body;
    try{
