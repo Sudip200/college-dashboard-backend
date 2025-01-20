@@ -82,7 +82,7 @@ app.get('/2023-placement', async (req, res) => {
     const results = await PlaceMent.find();
     res.send(results);
 });
-app.post('/createnotification',verifyToken, async (req, res) => {
+app.post('/createnotification', async (req, res) => {
     const {Title,Description,Date} = req.body;
     console.log(Title)
     try{
@@ -98,7 +98,7 @@ app.post('/createnotification',verifyToken, async (req, res) => {
 
     } 
 });
-app.get('/notifications',verifyToken, async (req, res) => {
+app.get('/notifications', async (req, res) => {
     const allnotices = await Notification.find();
     res.send(allnotices);
 });
@@ -112,7 +112,7 @@ app.get('/notifications',verifyToken, async (req, res) => {
 
 
 
-app.post('/attend',verifyToken, async (req, res) => {
+app.post('/attend', async (req, res) => {
    const {CourseCode,ROLL,Date,Status} = req.body;
    try{
        if(CourseCode =='' || ROLL =='' || Date == ''|| Status == ''){
@@ -128,12 +128,12 @@ app.post('/attend',verifyToken, async (req, res) => {
 
     
 });
-app.get('/faculty', verifyToken,async (req, res) => {
+app.get('/faculty',async (req, res) => {
     
     const results = await Faculty.find();
     res.send(results);
 });
-app.get('/attendence',verifyToken, async (req, res) => {
+app.get('/attendence', async (req, res) => {
         const {Date,CourseCode}= req.query;
         const results = await CourseAttendence.find({Date:Date,CourseCode:CourseCode});
         res.send(results);
@@ -157,7 +157,7 @@ app.post('/login', async (req,res)=>{
 }
 })
 
-app.post('/checkifexist', verifyToken, async (req,res)=>{
+app.post('/checkifexist', async (req,res)=>{
     const {CourseCode,Date} = req.body;
     const attendence = await Attendence.find({CourseCode:CourseCode,Date:Date});
     if(attendence.length>0){
@@ -167,7 +167,7 @@ app.post('/checkifexist', verifyToken, async (req,res)=>{
     }
 
 })
-app.get('/individualattendence',verifyToken, async (req,res)=>{
+app.get('/individualattendence', async (req,res)=>{
     const {CourseCode,ROLL} = req.query;
     const attendence = await CourseAttendence.find({CourseCode:CourseCode,StudentId:ROLL});
     console.log(attendence);
@@ -183,7 +183,7 @@ app.get('/individualattendence',verifyToken, async (req,res)=>{
     res.send({totalClass,present,percentage});
 }
 )
-app.post('/createclass',verifyToken,async (req,res)=>{
+app.post('/createclass',async (req,res)=>{
     const {CourseCode,Date}=req.body;
     const coursedata= await CourseData.findOne({CourseCode:CourseCode,Date:Date});
     if(coursedata){
