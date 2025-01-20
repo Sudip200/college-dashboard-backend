@@ -126,7 +126,7 @@ app.post('/attend', async (req, res) => {
     res.send(e)
    }
 
-    
+     
 });
 app.get('/faculty',async (req, res) => {
     
