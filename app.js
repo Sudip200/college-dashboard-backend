@@ -92,7 +92,7 @@ app.post('/createnotification', async (req, res) => {
             const newNotification = new Notification({Title:Title,Description:Description,Date:Date});
             newNotification.save();
             res.send('saved')
-        }
+        } 
     }catch(e){
         res.send(e)
 
